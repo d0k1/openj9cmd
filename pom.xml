@@ -6,7 +6,7 @@
 
     <groupId>com.focusit</groupId>
     <artifactId>openj9cmd</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <properties>
         <toolsjar>${JAVA_HOME}/lib/tools.jar</toolsjar>
         <rtjar>${JAVA_HOME}/jre/lib/rt.jar</rtjar>
