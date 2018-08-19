@@ -29,19 +29,26 @@ bash ./openj9cmd.sh 31605 jstack true true jstack.txt
 
 This tool provides just 3 basic functions. It can trigger OpenJ9 JavaDump and HeapDump, and it can get thread dump in jstack fashion.
 
-### JavaDump
+## JavaDump
 `bash ./openj9cmd.sh PID threaddump PATH/TO/FILE`
 
 - PID processId
 - PATH/TO/FILE file to hold all information
 
-### HeapDump
+### Tip
+In my opinion, the best instrument to analyze that kind of dumps is IBM Thread and Monitor Dump Analyzer for Java (https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=2245aa39-fa5c-4475-b891-14c205f7333c)
+
+## HeapDump
 `bash ./openj9cmd.sh PID heapdump PATH/TO/FILE`
 
 - PID processId
 - PATH/TO/FILE file to hold all information
 
-### JStack
+### Tip
+Heap dump produced by this tool is in PHD (Portable Heap Dump) format. To analyze it you have to install DTJF(IBM Diagnostic Tool Framework for Java) into Eclipse Memory Analyzer
+Eclipse download site can be found at https://developer.ibm.com/javasdk/tools/ (http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/runtimes/tools/dtfj/)
+
+## JStack
 `bash ./openj9cmd.sh PID jstack LockeMonitors LockedSynchronizers PATH/TO/FILE`
 
 - PID processId
